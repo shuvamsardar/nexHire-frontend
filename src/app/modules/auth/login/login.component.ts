@@ -32,7 +32,7 @@ import { ToastService } from '../../../shared/services/toast.service';
             </mat-form-field>
 
             <div class="demo-accounts">
-              <span class="demo-title">Demo Accounts (Password: Admin@123 / Hr@123 / Candidate@123):</span>
+              <span class="demo-title">Demo Accounts (Password: Admin&#64;123 / Hr&#64;123 / Candidate&#64;123):</span>
               <div class="demo-chips">
                 <button type="button" mat-stroked-button (click)="fillDemo('admin@nexhire.com', 'Admin@123')">Admin</button>
                 <button type="button" mat-stroked-button (click)="fillDemo('hr@nexhire.com', 'Hr@123')">HR</button>
