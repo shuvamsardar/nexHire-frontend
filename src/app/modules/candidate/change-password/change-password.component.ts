@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-change-password',
-  template: `
+    selector: 'app-change-password',
+    template: `
     <div>
       <app-page-header title="Change Password" subtitle="Update your account password securely."></app-page-header>
       <mat-card style="border-radius: 12px; margin-top: 8px; max-width: 480px;">
@@ -23,6 +23,7 @@ import { Component } from '@angular/core';
         </mat-card-content>
       </mat-card>
     </div>
-  `
+  `,
+    standalone: false
 })
 export class ChangePasswordComponent {}

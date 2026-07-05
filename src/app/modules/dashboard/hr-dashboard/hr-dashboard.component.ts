@@ -4,8 +4,8 @@ import { DashboardStats } from '../../../models/admin.model';
 
 /** HR Dashboard - mirrors the existing dashboard.component but scoped to HR portal */
 @Component({
-  selector: 'app-hr-dashboard',
-  template: `
+    selector: 'app-hr-dashboard',
+    template: `
     <div class="dashboard-overview">
       <app-page-header title="HR Dashboard" subtitle="Real-time recruitment metrics & corporate training statuses"></app-page-header>
 
@@ -101,7 +101,7 @@ import { DashboardStats } from '../../../models/admin.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .dashboard-overview { display: flex; flex-direction: column; gap: 24px; }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .stat-card { border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04) !important; }
@@ -139,7 +139,8 @@ import { DashboardStats } from '../../../models/admin.model';
     .meta-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #475569; }
     .dot { width: 8px; height: 8px; border-radius: 50%; }
     .green-dot { background-color: #10b981; } .blue-dot { background-color: #3b82f6; }
-  `]
+  `],
+    standalone: false
 })
 export class HrDashboardComponent implements OnInit {
   stats: DashboardStats | null = null;

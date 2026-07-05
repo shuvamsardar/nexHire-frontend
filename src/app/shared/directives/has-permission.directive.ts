@@ -10,7 +10,10 @@ import { CurrentUserService } from '../../core/auth/current-user.service';
  *   <button *appHasPermission="'ASSIGN_ASSESSMENT_SELECTED'">Assign Selected</button>
  *   <div *appHasPermission="['VIEW_BGV', 'UPDATE_BGV_STATUS']">...</div>
  */
-@Directive({ selector: '[appHasPermission]' })
+@Directive({
+    selector: '[appHasPermission]',
+    standalone: false
+})
 export class HasPermissionDirective implements OnInit, OnDestroy {
   @Input('appHasPermission') permission!: string | string[];
 
@@ -55,7 +58,10 @@ export class HasPermissionDirective implements OnInit, OnDestroy {
   }
 }
 
-@Directive({ selector: '[appHasAnyPermission]' })
+@Directive({
+    selector: '[appHasAnyPermission]',
+    standalone: false
+})
 export class HasAnyPermissionDirective implements OnInit, OnDestroy {
   @Input('appHasAnyPermission') permissions!: string[];
 

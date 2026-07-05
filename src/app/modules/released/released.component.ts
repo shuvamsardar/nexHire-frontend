@@ -6,8 +6,8 @@ import { ConfirmationDialogComponent } from '../../shared/components/confirmatio
 import { ReleasedCandidate, Project } from '../../models/project.model';
 
 @Component({
-  selector: 'app-released-candidates',
-  template: `
+    selector: 'app-released-candidates',
+    template: `
     <div class="released-candidates">
       <app-page-header title="Project Allocation Board" subtitle="Allocate graduated released trainees to active client projects based on technology domains"></app-page-header>
 
@@ -103,7 +103,7 @@ import { ReleasedCandidate, Project } from '../../models/project.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .released-candidates {
       display: flex;
       flex-direction: column;
@@ -186,7 +186,8 @@ import { ReleasedCandidate, Project } from '../../models/project.model';
       width: 100%;
       height: 40px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ReleasedCandidatesComponent implements OnInit {
   released: ReleasedCandidate[] = [];

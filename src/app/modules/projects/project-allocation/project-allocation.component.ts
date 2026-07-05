@@ -3,8 +3,8 @@ import { ProjectService } from '../../../services/project.service';
 import { Project, ProjectAllocation } from '../../../models/project.model';
 
 @Component({
-  selector: 'app-project-allocation',
-  template: `
+    selector: 'app-project-allocation',
+    template: `
     <div class="project-allocation-page">
       <app-page-header title="Project Allocation Board" subtitle="Review current project vacanies and past allocation records."></app-page-header>
 
@@ -81,7 +81,7 @@ import { Project, ProjectAllocation } from '../../../models/project.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .project-allocation-page {
       display: flex;
       flex-direction: column;
@@ -109,7 +109,8 @@ import { Project, ProjectAllocation } from '../../../models/project.model';
     table {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ProjectAllocationComponent implements OnInit {
   projects: Project[] = [];

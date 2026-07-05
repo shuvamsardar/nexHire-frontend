@@ -4,8 +4,8 @@ import { CurrentUserService } from '../../../core/auth/current-user.service';
 import { Application } from '../../../models/application.model';
 
 @Component({
-  selector: 'app-candidate-applications',
-  template: `
+    selector: 'app-candidate-applications',
+    template: `
     <div class="candidate-applications">
       <app-page-header title="My Job Applications" subtitle="Track the progress of your submitted job applications"></app-page-header>
 
@@ -58,7 +58,7 @@ import { Application } from '../../../models/application.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .candidate-applications {
       display: flex;
       flex-direction: column;
@@ -78,7 +78,8 @@ import { Application } from '../../../models/application.model';
     table {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class CandidateApplicationsComponent implements OnInit {
   applications: Application[] = [];

@@ -6,8 +6,8 @@ import { Application } from '../../../models/application.model';
 import { OfferLetter } from '../../../models/offer-letter.model';
 
 @Component({
-  selector: 'app-candidate-dashboard',
-  template: `
+    selector: 'app-candidate-dashboard',
+    template: `
     <div class="candidate-dashboard">
       <app-page-header title="Candidate Workspace" subtitle="Manage your applications, test schedules, and offer letters"></app-page-header>
 
@@ -80,7 +80,7 @@ import { OfferLetter } from '../../../models/offer-letter.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .candidate-dashboard {
       display: flex;
       flex-direction: column;
@@ -182,7 +182,8 @@ import { OfferLetter } from '../../../models/offer-letter.model';
       font-size: 12px;
       color: #64748b;
     }
-  `]
+  `],
+    standalone: false
 })
 export class CandidateDashboardComponent implements OnInit {
   user: any = null;

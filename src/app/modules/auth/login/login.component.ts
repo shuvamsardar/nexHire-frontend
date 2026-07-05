@@ -5,8 +5,8 @@ import { AuthService } from '../../../core/auth/auth.service';
 import { ToastService } from '../../../shared/services/toast.service';
 
 @Component({
-  selector: 'app-login',
-  template: `
+    selector: 'app-login',
+    template: `
     <div class="login-card-container">
       <mat-card class="login-card">
         <mat-card-header class="login-header">
@@ -52,7 +52,7 @@ import { ToastService } from '../../../shared/services/toast.service';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .login-card-container {
       display: flex;
       justify-content: center;
@@ -138,7 +138,8 @@ import { ToastService } from '../../../shared/services/toast.service';
       font-weight: 600;
       text-decoration: none;
     }
-  `]
+  `],
+    standalone: false
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;

@@ -8,13 +8,13 @@ import { Component, Input } from '@angular/core';
  *   <app-status-badge [status]="application.status"></app-status-badge>
  */
 @Component({
-  selector: 'app-status-badge',
-  template: `
+    selector: 'app-status-badge',
+    template: `
     <span class="status-badge" [ngClass]="getBadgeClass()">
       {{ getLabel() }}
     </span>
   `,
-  styles: [`
+    styles: [`
     .status-badge {
       display: inline-flex;
       align-items: center;
@@ -34,7 +34,8 @@ import { Component, Input } from '@angular/core';
     .badge-purple { background-color: #f3e8ff; color: #7c3aed; border: 1px solid #e9d5ff; }
     .badge-orange { background-color: #ffedd5; color: #c2410c; border: 1px solid #fed7aa; }
     .badge-teal { background-color: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; }
-  `]
+  `],
+    standalone: false
 })
 export class StatusBadgeComponent {
   @Input() status: string = '';

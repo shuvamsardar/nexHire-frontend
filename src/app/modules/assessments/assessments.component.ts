@@ -9,8 +9,8 @@ import { Application } from '../../models/application.model';
 import { Assessment, AssessmentStatus, AssessmentBulkResult } from '../../models/assessment.model';
 
 @Component({
-  selector: 'app-assessments-mgmt',
-  template: `
+    selector: 'app-assessments-mgmt',
+    template: `
     <div class="assessments-mgmt">
       <app-page-header title="Assessments Hub" subtitle="Assign coding tests and transition candidates to offer stage"></app-page-header>
 
@@ -157,7 +157,7 @@ import { Assessment, AssessmentStatus, AssessmentBulkResult } from '../../models
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .assessments-mgmt {
       display: flex;
       flex-direction: column;
@@ -245,7 +245,8 @@ import { Assessment, AssessmentStatus, AssessmentBulkResult } from '../../models
     .success-text { color: #16a34a; }
     .warn-text { color: #d97706; }
     .error-text { color: #dc2626; }
-  `]
+  `],
+    standalone: false
 })
 export class AssessmentsManagementComponent implements OnInit {
   eligibleApps: Application[] = [];

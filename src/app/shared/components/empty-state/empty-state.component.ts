@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
  *   <app-empty-state icon="search_off" title="No applications found" subtitle="Try adjusting your filters"></app-empty-state>
  */
 @Component({
-  selector: 'app-empty-state',
-  template: `
+    selector: 'app-empty-state',
+    template: `
     <div class="empty-state">
       <mat-icon class="empty-icon">{{ icon }}</mat-icon>
       <h3 class="empty-title">{{ title }}</h3>
@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
       <ng-content></ng-content>
     </div>
   `,
-  styles: [`
+    styles: [`
     .empty-state {
       display: flex;
       flex-direction: column;
@@ -44,7 +44,8 @@ import { Component, Input } from '@angular/core';
       margin: 0 0 24px;
       max-width: 320px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class EmptyStateComponent {
   @Input() icon = 'inbox';

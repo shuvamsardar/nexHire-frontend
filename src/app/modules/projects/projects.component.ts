@@ -5,8 +5,8 @@ import { Project, CreateProjectRequest } from '../../models/project.model';
 import { ToastService } from '../../shared/services/toast.service';
 
 @Component({
-  selector: 'app-projects',
-  template: `
+    selector: 'app-projects',
+    template: `
     <div class="projects-page">
       <app-page-header title="Projects" subtitle="Manage projects and allocations"></app-page-header>
 
@@ -107,7 +107,7 @@ import { ToastService } from '../../shared/services/toast.service';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .projects-page {
       display: flex;
       flex-direction: column;
@@ -152,7 +152,8 @@ import { ToastService } from '../../shared/services/toast.service';
       width: 100%;
       height: 40px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];

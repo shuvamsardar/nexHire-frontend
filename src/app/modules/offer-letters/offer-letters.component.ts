@@ -4,8 +4,8 @@ import { ToastService } from '../../shared/services/toast.service';
 import { OfferLetter, OfferStatus } from '../../models/offer-letter.model';
 
 @Component({
-  selector: 'app-offer-letters-mgmt',
-  template: `
+    selector: 'app-offer-letters-mgmt',
+    template: `
     <div class="offer-letters-mgmt">
       <app-page-header title="Offer Letters Hub" subtitle="Manage and monitor corporate offer documents and candidate acceptances"></app-page-header>
 
@@ -71,7 +71,7 @@ import { OfferLetter, OfferStatus } from '../../models/offer-letter.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .offer-letters-mgmt {
       display: flex;
       flex-direction: column;
@@ -106,7 +106,8 @@ import { OfferLetter, OfferStatus } from '../../models/offer-letter.model';
       color: #94a3b8;
       font-weight: 500;
     }
-  `]
+  `],
+    standalone: false
 })
 export class OfferLettersManagementComponent implements OnInit {
   offers: OfferLetter[] = [];

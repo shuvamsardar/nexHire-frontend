@@ -6,8 +6,8 @@ import { ConfirmationDialogComponent } from '../../shared/components/confirmatio
 import { BackgroundVerification, BgvStatus } from '../../models/background-verification.model';
 
 @Component({
-  selector: 'app-bgv-mgmt',
-  template: `
+    selector: 'app-bgv-mgmt',
+    template: `
     <div class="bgv-mgmt">
       <app-page-header title="Background Verification" subtitle="Perform address, education, and previous employment verification checks"></app-page-header>
 
@@ -63,7 +63,7 @@ import { BackgroundVerification, BgvStatus } from '../../models/background-verif
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .bgv-mgmt {
       display: flex;
       flex-direction: column;
@@ -104,7 +104,8 @@ import { BackgroundVerification, BgvStatus } from '../../models/background-verif
       color: #dc2626;
       font-weight: 600;
     }
-  `]
+  `],
+    standalone: false
 })
 export class BgvManagementComponent implements OnInit {
   verifications: BackgroundVerification[] = [];

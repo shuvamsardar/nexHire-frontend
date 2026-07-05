@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 /** Admin Dashboard - shows system-wide overview for ADMIN role */
 @Component({
-  selector: 'app-admin-dashboard',
-  template: `
+    selector: 'app-admin-dashboard',
+    template: `
     <div class="admin-dash">
       <app-page-header title="Admin Dashboard" subtitle="System administration overview"></app-page-header>
 
@@ -70,7 +70,7 @@ import { Component } from '@angular/core';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .admin-dash { display: flex; flex-direction: column; gap: 24px; }
     .admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .admin-card { border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04) !important; }
@@ -90,6 +90,7 @@ import { Component } from '@angular/core';
     .quick-links-card { border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04) !important; }
     .quick-links { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 12px; }
     .quick-links a { display: flex; align-items: center; gap: 8px; }
-  `]
+  `],
+    standalone: false
 })
 export class AdminDashboardComponent {}

@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
  *   </app-page-header>
  */
 @Component({
-  selector: 'app-page-header',
-  template: `
+    selector: 'app-page-header',
+    template: `
     <div class="page-header">
       <div class="page-header-left">
         <h1 class="page-title">{{ title }}</h1>
@@ -21,7 +21,7 @@ import { Component, Input } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .page-header {
       display: flex;
       align-items: flex-start;
@@ -48,7 +48,8 @@ import { Component, Input } from '@angular/core';
       gap: 8px;
       flex-wrap: wrap;
     }
-  `]
+  `],
+    standalone: false
 })
 export class PageHeaderComponent {
   @Input() title = '';

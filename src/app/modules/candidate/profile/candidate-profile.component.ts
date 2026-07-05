@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-candidate-profile',
-  template: `
+    selector: 'app-candidate-profile',
+    template: `
     <div>
       <app-page-header title="My Profile" subtitle="View and update your candidate profile."></app-page-header>
       <mat-card style="border-radius: 12px; margin-top: 8px;">
@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
         </mat-card-content>
       </mat-card>
     </div>
-  `
+  `,
+    standalone: false
 })
 export class CandidateProfileComponent {}

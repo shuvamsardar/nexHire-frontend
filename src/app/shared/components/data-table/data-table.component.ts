@@ -44,9 +44,10 @@ export interface FilterEvent {
  *   </app-data-table>
  */
 @Component({
-  selector: 'app-data-table',
-  templateUrl: './data-table.component.html',
-  styleUrls: ['./data-table.component.scss']
+    selector: 'app-data-table',
+    templateUrl: './data-table.component.html',
+    styleUrls: ['./data-table.component.scss'],
+    standalone: false
 })
 export class DataTableComponent<T extends { id?: string | number }> implements OnInit, OnDestroy {
   @Input() columns: TableColumn[] = [];

@@ -5,8 +5,8 @@ import { AuthService } from '../../../core/auth/auth.service';
 import { ToastService } from '../../../shared/services/toast.service';
 
 @Component({
-  selector: 'app-register',
-  template: `
+    selector: 'app-register',
+    template: `
     <div class="register-container">
       <mat-card class="register-card">
         <mat-card-header class="register-header">
@@ -127,7 +127,7 @@ import { ToastService } from '../../../shared/services/toast.service';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .register-container {
       display: flex;
       justify-content: center;
@@ -215,7 +215,8 @@ import { ToastService } from '../../../shared/services/toast.service';
       font-weight: 600;
       text-decoration: none;
     }
-  `]
+  `],
+    standalone: false
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;

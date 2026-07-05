@@ -6,8 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { CreateUserDialogComponent } from './create-user-dialog.component';
 
 @Component({
-  selector: 'app-user-management',
-  template: `
+    selector: 'app-user-management',
+    template: `
     <div class="user-management-container">
       <app-page-header title="User Management" subtitle="Manage system users (Candidate, HR, Admin) and restrict access if needed.">
         <button mat-raised-button color="primary" (click)="openCreateUserDialog()">
@@ -76,7 +76,7 @@ import { CreateUserDialogComponent } from './create-user-dialog.component';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .user-management-container {
       display: flex;
       flex-direction: column;
@@ -130,7 +130,8 @@ import { CreateUserDialogComponent } from './create-user-dialog.component';
     .role-admin { background-color: #f3e8ff !important; color: #7c3aed !important; }
     .role-hr { background-color: #dbeafe !important; color: #1d4ed8 !important; }
     .role-candidate { background-color: #f1f5f9 !important; color: #475569 !important; }
-  `]
+  `],
+    standalone: false
 })
 export class UserManagementComponent implements OnInit {
   users: LoggedInUser[] = [];

@@ -4,8 +4,8 @@ import { ToastService } from '../../../../shared/services/toast.service';
 import { City, CreateCityRequest } from '../../../../models/location.model';
 
 @Component({
-  selector: 'app-cities',
-  template: `
+    selector: 'app-cities',
+    template: `
     <div class="locations-page">
       <app-page-header title="Cities" subtitle="Manage city location budgets and coverage."></app-page-header>
 
@@ -68,7 +68,7 @@ import { City, CreateCityRequest } from '../../../../models/location.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .locations-page {
       display: flex;
       flex-direction: column;
@@ -99,7 +99,8 @@ import { City, CreateCityRequest } from '../../../../models/location.model';
     table {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class CitiesComponent implements OnInit {
   cities: City[] = [];

@@ -8,8 +8,8 @@ import { Asset, AssetType } from '../../models/asset.model';
 import { Trainee } from '../../models/training.model';
 
 @Component({
-  selector: 'app-assets-mgmt',
-  template: `
+    selector: 'app-assets-mgmt',
+    template: `
     <div class="assets-mgmt">
       <app-page-header title="Asset Inventory" subtitle="Track corporate hardware assets and assign laptops to active trainees">
         <button mat-raised-button color="primary" (click)="showCreateForm = !showCreateForm">
@@ -132,7 +132,7 @@ import { Trainee } from '../../models/training.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .assets-mgmt {
       display: flex;
       flex-direction: column;
@@ -201,7 +201,8 @@ import { Trainee } from '../../models/training.model';
     .full-width {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class AssetsManagementComponent implements OnInit {
   assets: Asset[] = [];

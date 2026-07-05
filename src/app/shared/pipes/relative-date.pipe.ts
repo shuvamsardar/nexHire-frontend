@@ -8,7 +8,8 @@ import { Pipe, PipeTransform } from '@angular/core';
  * - Events >= 7 days old: "Jan 15, 2024"
  */
 @Pipe({
-  name: 'relativeDate'
+    name: 'relativeDate',
+    standalone: false
 })
 export class RelativeDatePipe implements PipeTransform {
   transform(value: Date | string): string {

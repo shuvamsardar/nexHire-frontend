@@ -5,8 +5,8 @@ import { ToastService } from '../../../shared/services/toast.service';
 import { OfferLetter } from '../../../models/offer-letter.model';
 
 @Component({
-  selector: 'app-candidate-offers',
-  template: `
+    selector: 'app-candidate-offers',
+    template: `
     <div class="candidate-offers">
       <app-page-header title="My Offers" subtitle="Review and accept/reject your job offers"></app-page-header>
 
@@ -49,7 +49,7 @@ import { OfferLetter } from '../../../models/offer-letter.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .candidate-offers {
       display: flex;
       flex-direction: column;
@@ -105,7 +105,8 @@ import { OfferLetter } from '../../../models/offer-letter.model';
       padding-top: 16px !important;
       border-top: 1px solid #f1f5f9;
     }
-  `]
+  `],
+    standalone: false
 })
 export class CandidateOffersComponent implements OnInit {
   offers: OfferLetter[] = [];

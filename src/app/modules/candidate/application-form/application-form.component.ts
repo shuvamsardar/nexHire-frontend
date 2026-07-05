@@ -8,8 +8,8 @@ import { Job } from '../../../models/job.model';
 import { LoggedInUser } from '../../../models/user.model';
 
 @Component({
-  selector: 'app-application-form',
-  template: `
+    selector: 'app-application-form',
+    template: `
     <div class="apply-page-wrapper">
       
       <!-- Left side: Job Info (Sticky) -->
@@ -132,7 +132,8 @@ import { LoggedInUser } from '../../../models/user.model';
       <app-loader *ngIf="loading"></app-loader>
     </div>
   `,
-  styleUrls: ['./application-form.component.scss']
+    styleUrls: ['./application-form.component.scss'],
+    standalone: false
 })
 export class ApplicationFormComponent implements OnInit {
   user: LoggedInUser | null = null;

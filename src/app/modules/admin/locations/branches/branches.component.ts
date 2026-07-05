@@ -4,8 +4,8 @@ import { ToastService } from '../../../../shared/services/toast.service';
 import { Branch, City, CreateBranchRequest } from '../../../../models/location.model';
 
 @Component({
-  selector: 'app-branches',
-  template: `
+    selector: 'app-branches',
+    template: `
     <div class="locations-page">
       <app-page-header title="Branches" subtitle="Manage branch locations across cities."></app-page-header>
 
@@ -62,7 +62,7 @@ import { Branch, City, CreateBranchRequest } from '../../../../models/location.m
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .locations-page {
       display: flex;
       flex-direction: column;
@@ -93,7 +93,8 @@ import { Branch, City, CreateBranchRequest } from '../../../../models/location.m
     table {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class BranchesComponent implements OnInit {
   cities: City[] = [];

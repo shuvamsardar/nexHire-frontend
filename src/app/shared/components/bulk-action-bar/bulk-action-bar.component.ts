@@ -14,8 +14,8 @@ export interface BulkAction {
  * Appears when at least one row is selected in a data table.
  */
 @Component({
-  selector: 'app-bulk-action-bar',
-  template: `
+    selector: 'app-bulk-action-bar',
+    template: `
     <div class="bulk-bar" *ngIf="selectedCount > 0">
       <div class="bulk-info">
         <mat-icon>check_box</mat-icon>
@@ -36,7 +36,7 @@ export interface BulkAction {
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .bulk-bar {
       display: flex;
       align-items: center;
@@ -59,7 +59,8 @@ export interface BulkAction {
     .bulk-info mat-icon { font-size: 18px; width: 18px; height: 18px; }
     .bulk-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .bulk-actions button { height: 34px; font-size: 13px; }
-  `]
+  `],
+    standalone: false
 })
 export class BulkActionBarComponent {
   @Input() selectedCount = 0;

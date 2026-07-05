@@ -4,8 +4,8 @@ import { ToastService } from '../../../../shared/services/toast.service';
 import { Block, Branch, CreateBlockRequest } from '../../../../models/location.model';
 
 @Component({
-  selector: 'app-blocks',
-  template: `
+    selector: 'app-blocks',
+    template: `
     <div class="locations-page">
       <app-page-header title="Blocks" subtitle="Manage training blocks and capacity."></app-page-header>
 
@@ -66,7 +66,7 @@ import { Block, Branch, CreateBlockRequest } from '../../../../models/location.m
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .locations-page {
       display: flex;
       flex-direction: column;
@@ -97,7 +97,8 @@ import { Block, Branch, CreateBlockRequest } from '../../../../models/location.m
     table {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class BlocksComponent implements OnInit {
   blocks: Block[] = [];

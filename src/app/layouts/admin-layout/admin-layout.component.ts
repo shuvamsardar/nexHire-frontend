@@ -14,8 +14,8 @@ interface MenuItem {
 }
 
 @Component({
-  selector: 'app-admin-layout',
-  template: `
+    selector: 'app-admin-layout',
+    template: `
     <div class="portal-layout">
       <!-- Sidebar -->
       <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
@@ -107,7 +107,7 @@ interface MenuItem {
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .portal-layout {
       display: flex;
       height: 100vh;
@@ -238,7 +238,8 @@ interface MenuItem {
     .profile-dropdown { color: #475569; display: flex; align-items: center; gap: 6px; }
     .profile-name { font-size: 14px; font-weight: 500; }
     .content-container { flex: 1; padding: 24px; overflow-y: auto; }
-  `]
+  `],
+    standalone: false
 })
 export class AdminLayoutComponent implements OnInit {
   isSidebarCollapsed = false;

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-jobs-list',
-  template: `
+    selector: 'app-jobs-list',
+    template: `
     <div class="single-job-container">
       <!-- Hero Section -->
       <div class="job-hero">
@@ -108,7 +108,7 @@ import { Router } from '@angular/router';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .single-job-container {
       display: flex;
       flex-direction: column;
@@ -331,7 +331,8 @@ import { Router } from '@angular/router';
         padding: 32px 24px;
       }
     }
-  `]
+  `],
+    standalone: false
 })
 export class JobsListComponent implements OnInit {
   constructor(private router: Router) {}

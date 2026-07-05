@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-unauthorized',
-  template: `
+    selector: 'app-unauthorized',
+    template: `
     <div class="error-page">
       <mat-icon class="error-icon" color="warn">gpp_bad</mat-icon>
       <h1>403 - Forbidden Access</h1>
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <button mat-raised-button color="primary" routerLink="/dashboard">Return to Overview</button>
     </div>
   `,
-  styles: [`
+    styles: [`
     .error-page {
       display: flex;
       flex-direction: column;
@@ -38,6 +38,7 @@ import { Component } from '@angular/core';
       line-height: 1.6;
       margin-bottom: 28px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class UnauthorizedComponent {}

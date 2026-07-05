@@ -4,8 +4,8 @@ import { ProjectService } from '../../../services/project.service';
 import { Project } from '../../../models/project.model';
 
 @Component({
-  selector: 'app-project-details',
-  template: `
+    selector: 'app-project-details',
+    template: `
     <div class="project-details-page">
       <app-page-header title="Project Details" subtitle="View project roadmap and capacity summary"></app-page-header>
 
@@ -65,7 +65,7 @@ import { Project } from '../../../models/project.model';
       </ng-template>
     </div>
   `,
-  styles: [`
+    styles: [`
     .project-details-page {
       display: flex;
       flex-direction: column;
@@ -98,7 +98,8 @@ import { Project } from '../../../models/project.model';
       border-radius: 10px;
       background: #ffffff;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ProjectDetailsComponent implements OnInit {
   project?: Project;

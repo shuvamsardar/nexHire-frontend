@@ -9,8 +9,8 @@ import { City, Branch, Block } from '../../models/location.model';
 import { Training, TrainingAssignmentResult } from '../../models/training.model';
 
 @Component({
-  selector: 'app-selected-candidates',
-  template: `
+    selector: 'app-selected-candidates',
+    template: `
     <div class="selected-candidates">
       <app-page-header title="Training Allocation Hub" subtitle="Assign selected candidates to training batches with budget/vacancy verification"></app-page-header>
 
@@ -177,7 +177,7 @@ import { Training, TrainingAssignmentResult } from '../../models/training.model'
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .selected-candidates {
       display: flex;
       flex-direction: column;
@@ -303,7 +303,8 @@ import { Training, TrainingAssignmentResult } from '../../models/training.model'
       margin-bottom: 4px;
       color: #475569;
     }
-  `]
+  `],
+    standalone: false
 })
 export class SelectedCandidatesComponent implements OnInit {
   candidates: SelectedCandidate[] = [];

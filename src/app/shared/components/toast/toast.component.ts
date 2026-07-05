@@ -7,8 +7,8 @@ import { Toast, ToastService } from '../../services/toast.service';
  * Place once in app.component.html.
  */
 @Component({
-  selector: 'app-toast',
-  template: `
+    selector: 'app-toast',
+    template: `
     <div class="toast-container">
       <div *ngFor="let toast of toasts$ | async"
            class="toast-item"
@@ -21,7 +21,7 @@ import { Toast, ToastService } from '../../services/toast.service';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .toast-container {
       position: fixed;
       bottom: 24px;
@@ -52,7 +52,8 @@ import { Toast, ToastService } from '../../services/toast.service';
     .toast-message { flex: 1; line-height: 1.4; }
     .toast-close { width: 28px !important; height: 28px !important; line-height: 28px !important; flex-shrink: 0; }
     .toast-close mat-icon { font-size: 16px; }
-  `]
+  `],
+    standalone: false
 })
 export class ToastComponent implements OnInit {
   toasts$!: Observable<Toast[]>;

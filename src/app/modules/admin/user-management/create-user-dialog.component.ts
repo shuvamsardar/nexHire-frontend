@@ -3,8 +3,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-create-user-dialog',
-  template: `
+    selector: 'app-create-user-dialog',
+    template: `
     <h2 mat-dialog-title>Create New User</h2>
     <mat-dialog-content>
       <form [formGroup]="userForm" class="user-form">
@@ -41,7 +41,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       <button mat-raised-button color="primary" [disabled]="userForm.invalid" (click)="submit()">Create User</button>
     </mat-dialog-actions>
   `,
-  styles: [`
+    styles: [`
     .user-form {
       display: flex;
       flex-direction: column;
@@ -52,7 +52,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     .full-width {
       width: 100%;
     }
-  `]
+  `],
+    standalone: false
 })
 export class CreateUserDialogComponent {
   userForm: FormGroup;

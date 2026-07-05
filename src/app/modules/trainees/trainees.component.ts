@@ -6,8 +6,8 @@ import { ConfirmationDialogComponent } from '../../shared/components/confirmatio
 import { Trainee, TraineeStatus } from '../../models/training.model';
 
 @Component({
-  selector: 'app-trainees-mgmt',
-  template: `
+    selector: 'app-trainees-mgmt',
+    template: `
     <div class="trainees-mgmt">
       <app-page-header title="Trainee Batches" subtitle="Track progress percentages and graduate trainees to project-ready state"></app-page-header>
 
@@ -81,7 +81,7 @@ import { Trainee, TraineeStatus } from '../../models/training.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .trainees-mgmt {
       display: flex;
       flex-direction: column;
@@ -133,7 +133,8 @@ import { Trainee, TraineeStatus } from '../../models/training.model';
       color: #16a34a;
       font-weight: 600;
     }
-  `]
+  `],
+    standalone: false
 })
 export class TraineesManagementComponent implements OnInit {
   trainees: Trainee[] = [];

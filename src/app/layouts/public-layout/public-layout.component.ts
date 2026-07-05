@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-public-layout',
-  template: `
+    selector: 'app-public-layout',
+    template: `
     <div class="public-layout">
       <header class="public-header">
         <div class="header-container">
@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
       </footer>
     </div>
   `,
-  styles: [`
+    styles: [`
     .public-layout {
       display: flex;
       flex-direction: column;
@@ -85,6 +85,7 @@ import { Component } from '@angular/core';
       padding: 24px;
       font-size: 14px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class PublicLayoutComponent {}

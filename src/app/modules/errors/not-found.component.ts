@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-not-found',
-  template: `
+    selector: 'app-not-found',
+    template: `
     <div class="error-page">
       <mat-icon class="error-icon">search_off</mat-icon>
       <h1>404 - Page Not Found</h1>
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <button mat-raised-button color="primary" routerLink="/">Return Home</button>
     </div>
   `,
-  styles: [`
+    styles: [`
     .error-page {
       display: flex;
       flex-direction: column;
@@ -39,6 +39,7 @@ import { Component } from '@angular/core';
       line-height: 1.6;
       margin-bottom: 28px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class NotFoundComponent {}

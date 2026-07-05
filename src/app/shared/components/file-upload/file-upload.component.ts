@@ -11,9 +11,10 @@ export interface UploadResult {
 }
 
 @Component({
-  selector: 'app-file-upload',
-  templateUrl: './file-upload.component.html',
-  styleUrls: ['./file-upload.component.scss']
+    selector: 'app-file-upload',
+    templateUrl: './file-upload.component.html',
+    styleUrls: ['./file-upload.component.scss'],
+    standalone: false
 })
 export class FileUploadComponent implements OnDestroy {
   @Input() allowedTypes: string[] = [];

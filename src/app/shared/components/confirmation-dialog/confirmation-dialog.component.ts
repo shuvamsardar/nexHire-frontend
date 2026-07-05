@@ -13,8 +13,8 @@ export interface ConfirmationDialogData {
  * ConfirmationDialog: Reusable confirm modal.
  */
 @Component({
-  selector: 'app-confirmation-dialog',
-  template: `
+    selector: 'app-confirmation-dialog',
+    template: `
     <div class="confirm-dialog">
       <div class="confirm-header" [ngClass]="'header-' + data.type">
         <mat-icon class="confirm-icon">{{ getIcon() }}</mat-icon>
@@ -33,7 +33,7 @@ export interface ConfirmationDialogData {
       </mat-dialog-actions>
     </div>
   `,
-  styles: [`
+    styles: [`
     .confirm-dialog { min-width: 380px; max-width: 480px; }
     .confirm-header {
       display: flex;
@@ -48,7 +48,8 @@ export interface ConfirmationDialogData {
     h2 { margin: 0; font-size: 18px; }
     .confirm-content p { color: #374151; line-height: 1.6; margin: 0; padding-top: 8px;}
     mat-dialog-actions { padding: 16px 24px !important; gap: 8px; }
-  `]
+  `],
+    standalone: false
 })
 export class ConfirmationDialogComponent {
   constructor(

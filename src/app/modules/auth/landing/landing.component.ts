@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-landing',
-  template: `
+    selector: 'app-landing',
+    template: `
     <div class="landing-page">
       <!-- Hero Section -->
       <section class="hero-section">
@@ -47,7 +47,7 @@ import { Component } from '@angular/core';
       </section>
     </div>
   `,
-  styles: [`
+    styles: [`
     .landing-page {
       width: 100%;
       overflow-x: hidden;
@@ -166,6 +166,7 @@ import { Component } from '@angular/core';
       line-height: 1.5;
       margin: 0;
     }
-  `]
+  `],
+    standalone: false
 })
 export class LandingComponent {}

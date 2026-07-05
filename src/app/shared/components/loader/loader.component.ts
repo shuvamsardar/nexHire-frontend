@@ -7,8 +7,8 @@ import { LoaderService } from '../../services/loader.service';
  * Place once in app.component.html.
  */
 @Component({
-  selector: 'app-loader',
-  template: `
+    selector: 'app-loader',
+    template: `
     <div class="loader-overlay" *ngIf="loading$ | async">
       <div class="loader-spinner">
         <mat-spinner diameter="48"></mat-spinner>
@@ -16,7 +16,7 @@ import { LoaderService } from '../../services/loader.service';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .loader-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -39,7 +39,8 @@ import { LoaderService } from '../../services/loader.service';
       font-weight: 500;
       margin: 0;
     }
-  `]
+  `],
+    standalone: false
 })
 export class LoaderComponent implements OnInit {
   loading$!: Observable<boolean>;

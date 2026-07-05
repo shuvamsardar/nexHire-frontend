@@ -4,8 +4,8 @@ import { ToastService } from '../../shared/services/toast.service';
 import { Application, ApplicationStatus } from '../../models/application.model';
 
 @Component({
-  selector: 'app-applications-mgmt',
-  template: `
+    selector: 'app-applications-mgmt',
+    template: `
     <div class="applications-mgmt">
       <app-page-header title="Job Applications" subtitle="Review and transition applicant states from apply to shortlisting"></app-page-header>
 
@@ -95,7 +95,7 @@ import { Application, ApplicationStatus } from '../../models/application.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .applications-mgmt {
       display: flex;
       flex-direction: column;
@@ -141,7 +141,8 @@ import { Application, ApplicationStatus } from '../../models/application.model';
       color: #94a3b8;
       font-weight: 500;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ApplicationsManagementComponent implements OnInit {
   applications: Application[] = [];
