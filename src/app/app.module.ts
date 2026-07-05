@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,62 +52,51 @@ import { BlocksComponent } from './modules/admin/locations/blocks/blocks.compone
 import { UnauthorizedComponent } from './modules/errors/unauthorized.component';
 import { NotFoundComponent } from './modules/errors/not-found.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-
-    // Layouts
-    PublicLayoutComponent,
-    CandidateLayoutComponent,
-    HrLayoutComponent,
-    AdminLayoutComponent,
-
-    // Candidate Portal
-    CandidateProfileComponent,
-    ChangePasswordComponent,
-    CandidateDashboardComponent,
-    CandidateApplicationsComponent,
-    CandidateOffersComponent,
-    JobsListComponent,
-    JobDetailsComponent,
-    ApplicationFormComponent,
-
-    // HR Portal
-    HrDashboardComponent,
-    ApplicationsManagementComponent,
-    AssessmentsManagementComponent,
-    OfferLettersManagementComponent,
-    BgvManagementComponent,
-    SelectedCandidatesComponent,
-    TraineesManagementComponent,
-    AssetsManagementComponent,
-    ReleasedCandidatesComponent,
-    ProjectsComponent,
-    ProjectAllocationComponent,
-    ProjectDetailsComponent,
-
-    // Admin Portal
-    AdminDashboardComponent,
-    UserManagementComponent,
-    CreateUserDialogComponent,
-    BudgetsComponent,
-    SystemSettingsComponent,
-    CitiesComponent,
-    BranchesComponent,
-    BlocksComponent,
-
-    // Errors
-    UnauthorizedComponent,
-    NotFoundComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    CoreModule,
-    SharedModule,
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        // Layouts
+        PublicLayoutComponent,
+        CandidateLayoutComponent,
+        HrLayoutComponent,
+        AdminLayoutComponent,
+        // Candidate Portal
+        CandidateProfileComponent,
+        ChangePasswordComponent,
+        CandidateDashboardComponent,
+        CandidateApplicationsComponent,
+        CandidateOffersComponent,
+        JobsListComponent,
+        JobDetailsComponent,
+        ApplicationFormComponent,
+        // HR Portal
+        HrDashboardComponent,
+        ApplicationsManagementComponent,
+        AssessmentsManagementComponent,
+        OfferLettersManagementComponent,
+        BgvManagementComponent,
+        SelectedCandidatesComponent,
+        TraineesManagementComponent,
+        AssetsManagementComponent,
+        ReleasedCandidatesComponent,
+        ProjectsComponent,
+        ProjectAllocationComponent,
+        ProjectDetailsComponent,
+        // Admin Portal
+        AdminDashboardComponent,
+        UserManagementComponent,
+        CreateUserDialogComponent,
+        BudgetsComponent,
+        SystemSettingsComponent,
+        CitiesComponent,
+        BranchesComponent,
+        BlocksComponent,
+        // Errors
+        UnauthorizedComponent,
+        NotFoundComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        CoreModule,
+        SharedModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

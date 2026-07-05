@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { HttpEventType } from '@angular/common/http';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { HttpEventType, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FileUploadComponent, UploadResult } from './file-upload.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,14 +15,12 @@ describe('FileUploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FileUploadComponent ],
-      imports: [
-        HttpClientTestingModule,
-        MatIconModule,
+    declarations: [FileUploadComponent],
+    imports: [MatIconModule,
         MatButtonModule,
-        MatProgressBarModule
-      ]
-    })
+        MatProgressBarModule],
+    providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+})
     .compileComponents();
 
     httpMock = TestBed.inject(HttpTestingController);
